@@ -1,16 +1,16 @@
 from django.shortcuts import render
-from Fambd.models import Family
+from Fambd.models import Fam
 
 def addFamily(request):
-    new_Fam= Family.objects.create(name= "Carlos Martel", age= 57)
+    new_Fam= Fam.objects.create(name= "Carlos Martel", age= 57)
     context = {
         "new_Fam": new_Fam
     }
-    return render(request, "add-family.htm", context=context)
+    return render(request, "add-family.html", context=context)
 
 def Family(request):
-    Family= Family.objects.all()
+    Family1= Fam.objects.all()
     context = {
-        "Family":Family
+        "Family":Family1
     }
     return render(request, "family.html", context=context)
