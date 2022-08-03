@@ -1,7 +1,13 @@
-{% for family in family %}
+{% extends 'base.html' %}
 
-    <h1>El nombre es {{family.name}}</h1>
-    <h2>Su cumpleaños es {{family.birthay}}</h2>
-    <h2>Su edad {{family.age}}</h2>
+{% block contenido_que_cambia %}
 
-{% endfor %}
+    {% for family in family %}
+
+        <h1>El nombre es {{family.name}}</h1>
+        <h2>Su cumpleaños es {{family.birthay}}</h2>
+        <h2>Su edad {{family.age}}</h2>
+
+    {% endfor %}
+
+{% endblock %}
